@@ -1,0 +1,17 @@
+@use "../../global" as *;
+
+
+.p-sidebar {
+  @include mq(lv1280) {
+    margin-top: 50px;
+  }
+
+  &__title {
+    display: grid;
+    place-items: center;
+    height: 63px;
+    background-color: $main-color;
+    font-size: 21px;
+    color: #fff;
+  }
+}

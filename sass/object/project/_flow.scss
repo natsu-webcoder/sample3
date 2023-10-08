@@ -1,0 +1,26 @@
+@use "../../global" as *;
+
+
+.p-flow {
+  padding-top: 58px;
+
+  @include mq(lv767) {
+    padding-top: 48px;
+  }
+
+  &__body {
+    margin-top: 52px;
+
+    @include mq(lv767) {
+      margin-top: 40px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

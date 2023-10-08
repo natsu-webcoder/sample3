@@ -1,0 +1,28 @@
+@use "../../global" as *;
+
+
+.p-main-nav {
+  &__list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
+    @include mq(lv1280) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  &__item {
+    margin-left: 28px;
+
+    @include mq(lv1280) {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+}

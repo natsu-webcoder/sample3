@@ -1,0 +1,270 @@
+@use "../../global" as *;
+
+
+.mw_wp_form form {
+  padding-top: 52px;
+  padding-bottom: 82px;
+
+  @include mq(lv767) {
+    padding-bottom: 52px;
+  }
+}
+
+
+.mw_wp_form .error {
+  margin-top: 10px;
+}
+
+.p-contact-form {
+  &__inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  &__lead {
+    line-height: calc(27 / 16);
+  }
+
+  &__body {
+    margin-top: 40px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+
+    @include mq(lv767) {
+      gap: 16px;
+    }
+  }
+
+  &__item--v1 {
+    margin-top: 16px;
+  }
+
+  &__item--v2 {
+    margin-top: 24px;
+  }
+
+  &__title {
+    display: block;
+
+    @include mq(lv767) {
+      line-height: calc(27 / 16);
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    font-size: 12px;
+    border: 1px solid $main-color;
+    width: 100%;
+    margin-top: 12px;
+
+    @include mq(lv767) {
+      margin-top: 6px;
+    }
+  }
+
+  &__input {
+    display: block;
+    height: 50px;
+    padding: 19px;
+
+    &::placeholder {
+      color: #B4B4B4;
+    }
+  }
+
+  &__radio-wrapper {
+    margin-top: 20px;
+
+    span.mwform-radio-field {
+      margin-bottom: 14px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      label {
+        display: flex;
+      }
+
+      input[type="radio"] {
+        position: absolute !important;
+        white-space: nowrap !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        border: 0 !important;
+        padding: 0 !important;
+        clip: rect(0 0 0 0) !important;
+        clip-path: inset(50%) !important;
+        margin: -1px !important;
+
+        &:checked+span.mwform-radio-field-text::before {
+          border: 7px solid $main-color;
+        }
+      }
+    }
+
+    span.mwform-radio-field-text {
+      position: relative;
+      padding-left: 40px;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #707070;
+      }
+    }
+  }
+
+  &__radio {
+    display: flex;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & label {
+      position: relative;
+      padding-left: 40px;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #707070;
+      }
+    }
+
+    & input[type="radio"] {
+
+      &:checked+label::before {
+        border: 7px solid $main-color;
+      }
+    }
+  }
+
+  &__textarea {
+    height: 240px;
+    padding: 22px;
+    line-height: 1.5;
+
+    &::placeholder {
+      color: #B4B4B4;
+    }
+  }
+
+  &__note,
+  &__consent {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  &__note {
+    @include mq(lv767) {
+      line-height: calc(27 / 16);
+    }
+  }
+
+  &__consent {
+    @include mq(lv767) {
+      margin-top: 20px;
+    }
+
+    input[type="checkbox"] {
+      position: absolute !important;
+      white-space: nowrap !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      border: 0 !important;
+      padding: 0 !important;
+      clip: rect(0 0 0 0) !important;
+      clip-path: inset(50%) !important;
+      margin: -1px !important;
+
+      &:checked+span.mwform-checkbox-field-text:before {
+        background-color: $main-color;
+        border: none;
+      }
+
+      &:checked+span.mwform-checkbox-field-text:after {
+        content: "";
+        position: absolute;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        left: 0.4em;
+        top: 0.3em;
+        width: 0.45em;
+        height: 0.7em;
+        transform: translateY(-2px) rotate(45deg);
+      }
+    }
+
+    span.mwform-checkbox-field-text {
+      cursor: pointer;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #707070;
+        margin-right: 15px;
+        flex-shrink: 0;
+
+        @include mq(lv767) {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+
+  &__note-link {
+    color: $orange;
+    text-decoration: underline;
+  }
+
+  &__btn-wrapper {
+    margin-top: 42px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: $main-color;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+}

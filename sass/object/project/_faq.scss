@@ -1,0 +1,14 @@
+@use "../../global" as *;
+
+
+.p-faq {
+  padding-top: 75px;
+
+  @include mq(lv767) {
+    padding-top: 48px;
+  }
+
+  &__body {
+    margin-top: 32px;
+  }
+}

@@ -1,0 +1,65 @@
+@use "../../global" as *;
+
+
+.p-success-item {
+  @include mq(lv1280) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: #fff;
+    line-height: calc(29 / 16);
+
+    @include mq(lv767) {
+      line-height: 1.5;
+    }
+  }
+
+  &__body {
+    @include mq(lv1280) {
+      margin-top: auto;
+    }
+  }
+
+  &__img-wrapper {
+    margin-top: 6px;
+    height: 171px;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    @include mq(lv767) {
+      margin-top: 10px;
+    }
+  }
+
+  &__img-wrapper-inner {
+    margin-top: auto;
+  }
+
+  &__text-wrapper {
+    margin-top: 16px;
+    display: flex;
+    column-gap: 8px;
+  }
+
+  &__text01 {
+    width: 100px;
+    padding: 8px 10px 8px 10px;
+    background-color: #fff;
+  }
+
+  &__text02 {
+    padding: 8px 0 8px 14px;
+    flex: 1;
+    background-color: #fff;
+  }
+
+  &__text03 {
+    margin-top: 10px;
+    padding: 8px 0 8px 14px;
+    background-color: #fff;
+  }
+}

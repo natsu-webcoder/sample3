@@ -1,0 +1,74 @@
+@use "../../global" as *;
+
+
+.p-top-kv {
+  margin-top: 80px;
+  height: 476px;
+  padding-top: 116px;
+  background-image: url(../img/fv.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  @include mq(lv1280) {
+    background-position-x: 80%;
+  }
+
+  @include mq(lv767) {
+    margin-top: 80px;
+    padding-top: 94px;
+  }
+
+  &__inner {
+    text-align: center;
+    color: #fff;
+
+    @include mq(lv767) {
+      padding: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 0px 3px 6px #00000029;
+
+    @include mq(lv767) {
+      font-size: 42px;
+      line-height: 1.1;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 22px;
+    font-size: 18px;
+    line-height: calc(31 / 18);
+
+    @include mq(lv767) {
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    margin-top: 44px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn-link {
+    display: grid;
+    place-items: center;
+    width: 260px;
+    height: 60px;
+    border-radius: 31px;
+    background-color: $orange;
+  }
+
+  &__contact {
+    margin-top: 22px;
+  }
+
+  &__contact-link {
+    display: inline-block;
+    text-decoration: underline;
+  }
+}

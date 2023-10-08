@@ -1,0 +1,48 @@
+@use "../../global" as *;
+
+
+.p-news__body .navigation {
+  margin-top: 72px;
+}
+
+.p-blog__body .navigation {
+  margin-top: 109px;
+
+  @include mq(lv767) {
+    margin-top: 72px;
+  }
+}
+
+.nav-links {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  font-weight: bold;
+
+  @include mq(lv767) {
+    column-gap: 5px;
+  }
+
+  span,
+  a {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+  }
+
+  span.current {
+    color: #fff;
+    background-color: $main-color;
+  }
+
+  a {
+    border: 1px solid $main-color;
+  }
+
+  .prev,
+  .next {
+    display: none;
+  }
+}

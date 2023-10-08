@@ -1,0 +1,86 @@
+@use "../../global" as *;
+
+
+.p-strength-item {
+  display: flex;
+  column-gap: 50px;
+
+  @include mq(lv1280) {
+    height: 266px;
+    column-gap: 30px;
+  }
+
+  @include mq(lv767) {
+    height: auto;
+    flex-direction: column;
+  }
+
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+
+    @include mq(lv767) {
+      flex-direction: column;
+    }
+  }
+
+  &__text-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    display: inline-block;
+    padding: 8px 26px;
+    background-color: $orange;
+    color: #fff;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: calc(39 / 26);
+    margin-top: 28px;
+
+    @include mq(lv1280) {
+      font-size: 22px;
+    }
+
+    @include mq(lv767) {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+
+  &__text {
+    line-height: calc(27 / 16);
+    margin-top: auto;
+
+    @include mq(lv767) {
+      margin-top: 20px;
+    }
+  }
+
+  &__text--mt34 {
+    margin-top: 34px;
+  }
+
+  &__img-wrapper {
+    @include mq(lv1280) {
+      width: 40%;
+    }
+
+    @include mq(lv767) {
+      width: 100%;
+      height: 200px;
+      margin-top: 15px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+

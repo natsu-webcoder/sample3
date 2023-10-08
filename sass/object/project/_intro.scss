@@ -1,0 +1,91 @@
+@use "../../global" as *;
+
+
+.p-intro {
+  padding-top: 62px;
+  padding-bottom: 54px;
+  background-color: $main-color;
+
+  @include mq(lv767) {
+    padding-top: 48px;
+  }
+
+  &__heading {
+    color: #fff;
+  }
+
+  &__body {
+    margin-top: 54px;
+    font-weight: bold;
+
+    @include mq(lv767) {
+      margin-top: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    color: #fff;
+
+    @include mq(lv767) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    font-size: 18px;
+    line-height: calc(39 / 18);
+
+    @include mq(lv767) {
+      flex-direction: column;
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 1.8;
+    }
+  }
+
+  &__text-wrapper {
+    margin-top: 72px;
+    padding: 12px 16px;
+    background-color: #fff;
+
+    @include mq(lv767) {
+      margin-top: 44px;
+    }
+  }
+  
+  &__text-wrapper-inner {
+    border: 5px solid $main-color;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 20px;
+
+    @include mq(lv767) {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
+  &__text01 {
+    font-size: 36px;
+    line-height: calc(50 / 36);
+
+    @include mq(lv767) {
+      font-size: 22px;
+    }
+  }
+
+  &__text02 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: calc(31 / 18);
+    margin-top: 18px;
+
+    @include mq(lv767) {
+      font-size: 15px;
+    }
+  }
+}

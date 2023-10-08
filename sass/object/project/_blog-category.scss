@@ -1,0 +1,15 @@
+@use "../../global" as *;
+
+
+.p-blog-category {
+  margin-top: 50px;
+
+  &__body {
+    margin-top: 30px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 16px;
+  }
+}

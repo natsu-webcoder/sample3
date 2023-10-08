@@ -1,0 +1,110 @@
+@use "../../global" as *;
+
+
+.p-contact-banner {
+  &__body {
+    height: 256px;
+    padding-top: 70px;
+    background-image: url(../img/cta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+
+    @include mq(lv767) {
+      height: auto;
+      padding-top: 46px;
+      padding-bottom: 46px;
+    }
+  }
+  
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+
+    @include mq(lv767) {
+      font-size: 24px;
+    }
+  }
+
+  &__btn {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn-link {
+    display: grid;
+    place-items: center;
+    width: 280px;
+    height: 50px;
+    background-color: $orange;
+    border-radius: 25px;
+  }
+
+  &__link-wrapper {
+    margin-top: 22px;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: underline;
+  }
+
+  &__footer {
+    height: 80px;
+    padding-bottom: 24px;
+
+    @include mq(lv1280) {
+      height: auto;
+      padding-top: 24px;
+    }
+  }
+
+  &__footer-inner { 
+    height: 100%;
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include mq(lv1280) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__tel {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: -5px;
+
+    @include mq(lv1280) {
+      margin-bottom: 12px;
+      margin-top: 12px;
+    }
+
+    @include mq(lv767) {
+      font-size: 32px;
+    }
+  }
+
+  &__text01, &__text02 {
+    flex: 1;
+  }
+
+  &__text01 {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+
+    @include mq(lv1280) {
+      display: block;
+    }
+
+    @include mq(lv767) {
+      font-size: 14px;
+    }
+  }
+}

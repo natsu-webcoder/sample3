@@ -1,0 +1,22 @@
+@use "../../global" as *;
+
+
+.blog-news-wrapper {
+  padding-top: 90px;
+  padding-bottom: 120px;
+
+  @include mq(lv767) {
+    padding-top: 54px;
+    padding-bottom: 60px;
+  }
+}
+
+.blog-news-wrapper .l-inner {
+  display: flex;
+  column-gap: 66px;
+
+  @include mq(lv767) {
+    flex-direction: column;
+    row-gap: 54px;
+  }
+}

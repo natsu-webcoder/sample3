@@ -1,0 +1,27 @@
+@use "../../global" as *;
+
+
+.p-news-detail {
+  padding-top: 50px;
+  padding-bottom: 63px;
+
+  &__heading {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    line-height: calc(48 / 28);
+
+    @include mq(lv767) {
+      font-size: 22px;
+    }
+  }
+
+  &__date {
+    margin-top: 26px;
+    text-align: right;
+  }
+
+  &__body {
+    margin-top: 60px;
+  }
+}

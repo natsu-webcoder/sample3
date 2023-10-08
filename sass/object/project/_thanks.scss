@@ -1,0 +1,20 @@
+@use "../../global" as *;
+
+
+.p-thanks {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__message {
+    line-height: calc(27 / 16);
+  }
+
+  &__link-wrapper {
+    margin-top: 76px;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+}

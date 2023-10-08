@@ -1,0 +1,78 @@
+@use "../../global" as *;
+
+.wordpress-content > *:first-child {
+  margin-top: 0;
+}
+
+.wordpress-content {
+  h2 {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: calc(39 / 26);
+    margin-top: 40px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: calc(28 / 22);
+    padding-left: 14px;
+    border-left: 4px solid $main-color;
+    margin-top: 42px;
+  }
+
+  p, li {
+    line-height: calc(24 / 16);
+    margin-top: 30px;
+  }
+
+  figure, blockquote {
+    margin-top: 30px;
+  }
+
+  li {
+    padding-left: 32px;
+    position: relative;
+    
+    &::before {
+      position: absolute;
+      content: '';
+      width: 11px;
+      height: 11px;
+      left: 0;
+      top: 0.75em;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background-color: $orange;
+    }
+  }
+
+  li + li {
+    margin-top: 0;
+  }
+
+  blockquote {
+    padding: 26px 30px 26px 74px;
+    background-color: #F8F8F8;
+    display: flex;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '“';
+      font-size: 90px;
+      color: #B4B4B4;
+      top: 20px;
+      left: 20px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    color: $orange;
+    text-decoration: underline;
+  }
+}

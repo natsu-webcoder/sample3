@@ -1,0 +1,47 @@
+@use "../../global" as *;
+
+
+.p-sub-kv {
+  margin-top: 80px;
+  height: 221px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &--news {
+    background-image: url(../img/news.jpg);
+  }
+
+  &--course {
+    background-image: url(../img/course.jpg);
+  }
+
+  &--blog {
+    background-image: url(../img/blog.jpg);
+  }
+
+  &--contact {
+    background-image: url(../img/contact.jpg);
+  }
+
+  @include mq(lv767) {
+    height: 150px;
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+
+    @include mq(lv767) {
+      font-size: 26px;
+    }
+  }
+}

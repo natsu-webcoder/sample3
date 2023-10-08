@@ -1,0 +1,33 @@
+@use "../../global" as *;
+
+
+.p-breadcrumb {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 16px 0;
+  background-color: #F8F8F8;
+  // position: sticky;
+  // top: 80px;
+  // z-index: 1;
+
+  span[property="itemListElement"] {
+    margin-left: 2px;
+
+    &:first-child {
+      margin-right: 2px;
+      margin-left: 0;
+
+      span[property="name"] {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+body.single .p-breadcrumb {
+  margin-top: 80px;
+}
+
+body.page-id-3277 .p-breadcrumb {
+  margin-top: 80px;
+}

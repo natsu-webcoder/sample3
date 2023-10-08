@@ -1,0 +1,51 @@
+@use "../../global" as *;
+
+
+.p-price-banner {
+  margin-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 54px;
+  background-image: url(../img/price.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mq(lv767) {
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__inner {
+    text-align: center;
+    color: #fff;
+
+    @include mq(lv767) {
+      padding: 0 20px;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+
+    @include mq(lv767) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__btn {
+    margin-top: 27px;
+
+    @include mq(lv767) {
+      margin-top: 20px;
+    }
+  }
+
+  &__btn-link {
+    display: inline-block;
+    padding: 16px 44px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+  }
+}

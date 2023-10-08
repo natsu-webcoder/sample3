@@ -1,0 +1,89 @@
+@use "../../global" as *;
+
+
+.p-flow-item {
+  display: flex;
+  height: 64px;
+
+  @include mq(lv1280) {
+    height: 80px;
+  }
+
+  @include mq(lv767) {
+    height: auto;
+  }
+
+  &__number {
+    display: grid;
+    place-items: center;
+    background-color: $orange;
+    color: #fff;
+    width: 64px;
+
+    @include mq(lv1280) {
+      width: 80px;
+    }
+
+    @include mq(lv767) {
+      width: 60px;
+    }
+  }
+
+  &__text-wrapper {
+    flex: 1;
+    display: flex;
+    background-color: #F8F8F8;
+
+    @include mq(lv767) {
+      flex-direction: column;
+      padding: 18px 0;
+    }
+  }
+
+  &__title, &__text {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    width: 214px;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 20px;
+    position: relative;
+
+    @include mq(lv767) {
+      font-size: 16px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 1px;
+      height: 30px;
+      background-color: #C3C3C3;
+
+      @include mq(lv767) {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    flex: 1;
+    padding-left: 54px;
+
+    @include mq(lv1280) {
+      line-height: calc(27 / 16);
+    }
+
+    @include mq(lv767) {
+      padding-left: 20px;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+  }
+}

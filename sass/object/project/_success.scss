@@ -1,0 +1,33 @@
+@use "../../global" as *;
+
+
+.p-success {
+  padding: 60px 0;
+  background-color: $main-color;
+
+  @include mq(lv767) {
+    padding: 48px 0;
+  }
+ 
+  &__heading {
+    color: #fff;
+  }
+
+  &__body {
+    margin-top: 130px;
+
+    @include mq(lv767) {
+      margin-top: 34px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include mq(lv767) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

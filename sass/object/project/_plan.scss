@@ -1,0 +1,25 @@
+@use "../../global" as *;
+
+
+.p-plan {
+  padding-top: 94px;
+  padding-bottom: 62px;
+
+  @include mq(lv767) {
+    padding-top: 48px;
+  }
+
+  &__body {
+    margin-top: 70px;
+
+    @include mq(lv767) {
+      margin-top: 34px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+  }
+}
